@@ -1,2 +1,5 @@
 # GetandCleanProject
-Files for class project related to Getting and Cleaning Data from JHU
+This repository contains files required for a class project related to the Getting and Cleaning Data course from JHU.
+
+The script is called "run_analysis.R" and completes the following steps to correspond with the class project instructions.
+###Read source files in working directory
