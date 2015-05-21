@@ -14,10 +14,13 @@ This repository contains files required for a class project related to the Getti
 * Lastly, I updated the variable names for the activity and subject data frames.
 
 ### 3. Use descriptive activity names to name the activities in the data set
-*  
-* 
+*  Section 3 of the R script handles this task. First I used the arrange() function to reoder the data set rows by subject then by activity. I did this because I saw some error messages using other functions so I wanted to pre-order my data and knew the final tidy data set needed to be ordered anyway.
+* Next, I used the as.factor() function to ensure the activity variable was a factor for the next function. I used the mapvalues() function to reassign the descriptive activity names to their corresponding activity values.
 
 ### 4. Appropriately labels the data set with descriptive variable names. 
-* The features.txt file contains the labels for the variable names. Since the file created a two variable/column data frame, I chose to use the subset the second column and use the transpose function to store in an object. 
-* Next, I 
+* Section 2 of the R script handles this task. The features data frame contains the labels for the variable names. Since the file created a two variable/column data frame, I chose to use the subset the second column and use the transpose function to store the variable names in an object. 
+* Next, I used the names() function to apply the variable names to columns within the test and training data sets.
+
 ### 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+* Section 4 of the R script handles this task. I used the ddply() function to condense the merged data set to a final data set that is grouped by subject, than activity.  I used the colwise() function to apply the mean to all these columns and collapse the data set to 180 rows from 10,299 rows.
+* The final script step is to create the .txt file for the final data set to upload the tidy data into the project site.
